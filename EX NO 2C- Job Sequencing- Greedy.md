@@ -26,11 +26,15 @@ Your goal is to maximize total profit while completing the maximum number of job
 
 ## Algorithm
 
-Input: Read the number of jobs n. For each job, read: id → unique job identifier deadline → latest time by which the job should be completed profit → profit gained if the job is completed before or on its deadline
-Sort Jobs by Profit: Sort all jobs in descending order of profit (highest profit first). This ensures we pick the most profitable jobs before less profitable ones.
-Find the Maximum Deadline: Determine the largest deadline among all jobs (maxDeadline). This helps define the number of available time slots.
-Initialize Scheduling Slots: Create a boolean array slot[maxDeadline + 1], where each index represents a time slot. Initially, all slots are false (unoccupied). Initialize counters: jobsDone = 0 → total number of jobs scheduled totalProfit = 0 → total profit earned
-Schedule the Jobs: For each job in sorted order: Check from its deadline slot backward (to schedule it as late as possible). If an empty slot (slot[j] == false) is found: Mark it as occupied (slot[j] = true). Increment jobsDone. Add the job’s profit to totalProfit. Break (move to next job). 6.Output: Return {jobsDone, totalProfit}. Print the number of jobs scheduled and total profit
+1.Input: Read the number of jobs n. For each job, read: id → unique job identifier deadline → latest time by which the job should be completed profit → profit gained if the job is completed before or on its deadline
+
+2.Sort Jobs by Profit: Sort all jobs in descending order of profit (highest profit first). This ensures we pick the most profitable jobs before less profitable ones.
+
+3.Find the Maximum Deadline: Determine the largest deadline among all jobs (maxDeadline). This helps define the number of available time slots.
+
+4.Initialize Scheduling Slots: Create a boolean array slot[maxDeadline + 1], where each index represents a time slot. Initially, all slots are false (unoccupied). Initialize counters: jobsDone = 0 → total number of jobs scheduled totalProfit = 0 → total profit earned
+
+5.Schedule the Jobs: For each job in sorted order: Check from its deadline slot backward (to schedule it as late as possible). If an empty slot (slot[j] == false) is found: Mark it as occupied (slot[j] = true). Increment jobsDone. Add the job’s profit to totalProfit. Break (move to next job). 6.Output: Return {jobsDone, totalProfit}. Print the number of jobs scheduled and total profit
 
 ## Program:
 ```
