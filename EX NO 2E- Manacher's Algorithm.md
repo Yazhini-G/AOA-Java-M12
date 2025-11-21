@@ -32,8 +32,8 @@ Compute the starting index in the original string as (cur - maxlen) / 2.
 ```
 /*
 Program to implement Reverse a String
-Developed by: Bhuvaneshwari S 
-Register Number: 212222220008
+Developed by: Yazhini G
+Register Number: 212222220060
 */
 import java.util.Scanner;
 
